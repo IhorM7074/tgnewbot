@@ -1,4 +1,3 @@
-talib:
 name: Python with ta-lib # Имя вашего workflow (можете изменить)
 
 on: [push, pull_request] # Когда workflow будет запускаться (при push и pull request)
@@ -16,4 +15,4 @@ jobs:
     - name: Install ta-lib # **Шаг для установки ta-lib**
       run: pip install ta-lib
     - name: Run your script # Шаг для запуска вашего Python скрипта (замените на свою команду)
-      run: python main.py
+      run:  python mailn.py
