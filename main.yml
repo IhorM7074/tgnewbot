@@ -1,0 +1,19 @@
+talib:
+name: Python with ta-lib # Имя вашего workflow (можете изменить)
+
+on: [push, pull_request] # Когда workflow будет запускаться (при push и pull request)
+
+jobs:
+  build: # Имя задачи (например, "build")
+    runs-on: ubuntu-latest # Операционная система, на которой будет запускаться workflow
+
+    steps:
+    - uses: actions/checkout@v3 # Скачать код репозитория
+    - name: Set up Python # Настроить Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x' # Версия Python (можете изменить)
+    - name: Install ta-lib # **Шаг для установки ta-lib**
+      run: pip install ta-lib
+    - name: Run your script # Шаг для запуска вашего Python скрипта (замените на свою команду)
+      run: python main.py
